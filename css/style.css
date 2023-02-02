@@ -11,6 +11,51 @@ body {
   background-color: #fff;
 }
 
+.container {
+  max-width: 375px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("../images/bg-main-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.cards {
+  margin-top: 2rem;
+  position: relative;
+  height: 35vh;
+}
+.cards img {
+  max-width: 85%;
+  object-fit: contain;
+}
+.cards .card-back {
+  display: flex;
+  justify-content: flex-end;
+}
+.cards .card-front {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+}
+.cards .card-front .card-logo {
+  position: absolute;
+  top: 6%;
+  left: 3%;
+  transform: scale(0.7);
+}
+
 html {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
